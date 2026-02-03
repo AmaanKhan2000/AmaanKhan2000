@@ -4,11 +4,9 @@
 
 <!-- Banner (Option A: Capsule Render) -->
 <p align="center">
-  <img
-    src="https://capsule-render.vercel.app/api?type=waving&height=240&text=Mohammed%20Amaan%20Ahmed%0AKhan&fontSize=52&fontAlign=50&fontAlignY=38&desc=Software%20Engineer%20%E2%80%A2%20Full%20Stack%20%E2%80%A2%20ML%20%2F%20Data&descAlign=50&descAlignY=70&section=header"
-    alt="banner"
-  />
+  <img src="./assets/banner.svg" alt="banner" width="100%" />
 </p>
+
 
 
 <!-- Typing tagline -->
