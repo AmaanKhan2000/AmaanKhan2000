@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0f1a"/>
+      <stop offset="45%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#050814"/>
+    </linearGradient>
+
+    <!-- Neon gradients -->
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7F3FF2"/>
+      <stop offset="45%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#FF2BD6"/>
+    </linearGradient>
+
+    <!-- Glow -->
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 1 0" result="colored"/>
+      <feMerge>
+        <feMergeNode in="colored"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Soft vignette -->
+    <radialGradient id="vignette" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="rgba(0,0,0,0)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.65)"/>
+    </radialGradient>
+
+    <!-- Animated scanline pattern -->
+    <pattern id="scan" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect width="6" height="1" fill="rgba(255,255,255,0.06)"/>
+    </pattern>
+
+    <!-- Subtle grid pattern -->
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="rgba(0,229,255,0.08)" stroke-width="1"/>
+    </pattern>
+
+    <!-- Moving shimmer -->
+    <linearGradient id="shimmer" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="rgba(255,255,255,0)"/>
+      <stop offset="50%" stop-color="rgba(255,255,255,0.18)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+
+    <!-- Clip for shimmer -->
+    <clipPath id="titleClip">
+      <text x="60" y="148" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="56" font-weight="800">
+        Mohammed Amaan Ahmed Khan
+      </text>
+    </clipPath>
+  </defs>
+
+  <!-- Base -->
+  <rect width="1200" height="320" rx="22" fill="url(#bg)"/>
+
+  <!-- Grid -->
+  <rect width="1200" height="320" rx="22" fill="url(#grid)"/>
+
+  <!-- Neon accent waves -->
+  <path d="M0 215 C 220 175, 420 300, 650 235 C 880 170, 1010 270, 1200 210 L1200 320 L0 320 Z"
+        fill="rgba(127,63,242,0.18)"/>
+  <path d="M0 240 C 260 190, 450 325, 700 255 C 930 190, 1060 300, 1200 235 L1200 320 L0 320 Z"
+        fill="rgba(0,229,255,0.14)"/>
+  <path d="M0 265 C 280 210, 520 340, 770 275 C 980 220, 1090 310, 1200 260 L1200 320 L0 320 Z"
+        fill="rgba(255,43,214,0.10)"/>
+
+  <!-- Animated scanlines (moving down) -->
+  <g opacity="0.55">
+    <rect width="1200" height="320" rx="22" fill="url(#scan)">
+      <animateTransform attributeName="transform" type="translate" from="0,-12" to="0,12" dur="2.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Vignette -->
+  <rect width="1200" height="320" rx="22" fill="url(#vignette)"/>
+
+  <!-- Neon corner strokes -->
+  <rect x="18" y="18" width="1164" height="284" rx="18" fill="none" stroke="rgba(0,229,255,0.28)" stroke-width="2"/>
+  <rect x="28" y="28" width="1144" height="264" rx="14" fill="none" stroke="rgba(255,43,214,0.18)" stroke-width="2"/>
+
+  <!-- Title -->
+  <text x="60" y="148" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="56" font-weight="800"
+        fill="url(#neon)" filter="url(#glow)">
+    Mohammed Amaan Ahmed Khan
+  </text>
+
+  <!-- Subtitle -->
+  <text x="60" y="192" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="22" font-weight="600"
+        fill="rgba(255,255,255,0.82)">
+    Software Engineer • Full Stack • ML / Data
+  </text>
+
+  <!-- Animated shimmer sweep across the title -->
+  <g clip-path="url(#titleClip)">
+    <rect x="-420" y="92" width="420" height="90" fill="url(#shimmer)" opacity="0.8">
+      <animate attributeName="x" from="-420" to="1320" dur="3.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Little “status chips” -->
+  <g font-family="Segoe UI, Inter, Arial, sans-serif" font-size="14" font-weight="700">
+    <g transform="translate(60,228)">
+      <rect width="140" height="32" rx="16" fill="rgba(17,24,39,0.75)" stroke="rgba(0,229,255,0.35)"/>
+      <text x="14" y="21" fill="rgba(255,255,255,0.88)">STATUS: ONLINE</text>
+    </g>
+
+    <g transform="translate(214,228)">
+      <rect width="160" height="32" rx="16" fill="rgba(17,24,39,0.75)" stroke="rgba(127,63,242,0.35)"/>
+      <text x="14" y="21" fill="rgba(255,255,255,0.88)">BUILD: SHIPPING</text>
+    </g>
+
+    <g transform="translate(388,228)">
+      <rect width="240" height="32" rx="16" fill="rgba(17,24,39,0.75)" stroke="rgba(255,43,214,0.35)"/>
+      <text x="14" y="21" fill="rgba(255,255,255,0.88)">FOCUS: SYSTEMS + AI</text>
+    </g>
+  </g>
+</svg>
