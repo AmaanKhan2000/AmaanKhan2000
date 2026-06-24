@@ -1,0 +1,60 @@
+<svg width="1200" height="340" viewBox="0 0 1200 340" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#11161D"/>
+      <stop offset="1" stop-color="#0B0F14"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.22" cy="0.30" r="0.9">
+      <stop offset="0" stop-color="#1B2330" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#0B0F14" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#202833"/>
+    </pattern>
+  </defs>
+
+  <!-- panel -->
+  <rect x="8" y="8" width="1184" height="324" rx="16" fill="url(#panel)" stroke="#1F2630" stroke-width="1.5"/>
+  <rect x="8" y="8" width="1184" height="324" rx="16" fill="url(#dots)" opacity="0.5"/>
+  <rect x="8" y="8" width="1184" height="324" rx="16" fill="url(#glow)"/>
+
+  <!-- window chrome -->
+  <line x1="8" y1="56" x2="1192" y2="56" stroke="#1F2630" stroke-width="1.5"/>
+  <circle cx="40" cy="32" r="5.5" fill="none" stroke="#3A4453" stroke-width="1.5"/>
+  <circle cx="62" cy="32" r="5.5" fill="none" stroke="#3A4453" stroke-width="1.5"/>
+  <circle cx="84" cy="32" r="5.5" fill="none" stroke="#3A4453" stroke-width="1.5"/>
+  <text x="600" y="37" text-anchor="middle" fill="#586069" font-size="14" letter-spacing="1">~/amaan-khan — zsh</text>
+
+  <!-- name -->
+  <text x="64" y="150" fill="#E6EDF3" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="62" font-weight="700" letter-spacing="-1">Amaan Khan</text>
+
+  <!-- role -->
+  <text x="66" y="188" fill="#7D8590" font-size="20" letter-spacing="2">SOFTWARE ENGINEER  ·  BACKEND &amp; FULL-STACK  ·  APPLIED ML</text>
+
+  <!-- prompt line -->
+  <text x="64" y="246" font-size="20">
+    <tspan fill="#FFA657">&#8227;</tspan><tspan fill="#79C0FF" dx="14">cat</tspan><tspan fill="#7D8590" dx="12">focus.txt</tspan>
+  </text>
+  <text x="64" y="280" fill="#ADBAC7" font-size="19" letter-spacing="0.5">building at the intersection of systems, data, and AI</text>
+  <rect x="660" y="265" width="11" height="19" fill="#79C0FF">
+    <animate attributeName="opacity" values="1;1;0;0" dur="1.1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- tags -->
+  <g font-size="15" fill="#8B949E">
+    <text x="64" y="312">OAuth2/OIDC</text>
+    <text x="200" y="312" fill="#30363D">/</text>
+    <text x="224" y="312">SSO · IAM</text>
+    <text x="330" y="312" fill="#30363D">/</text>
+    <text x="354" y="312">APIs</text>
+    <text x="414" y="312" fill="#30363D">/</text>
+    <text x="438" y="312">Data Pipelines</text>
+    <text x="592" y="312" fill="#30363D">/</text>
+    <text x="616" y="312">LLMs · RAG</text>
+  </g>
+
+  <!-- accent rule, right side -->
+  <line x1="980" y1="110" x2="1140" y2="110" stroke="#79C0FF" stroke-width="2"/>
+  <text x="1140" y="150" text-anchor="end" fill="#586069" font-size="13" letter-spacing="2">MS DATA SCIENCE</text>
+  <text x="1140" y="170" text-anchor="end" fill="#586069" font-size="13" letter-spacing="2">ARIZONA STATE UNIV.</text>
+</svg>
